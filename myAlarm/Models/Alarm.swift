@@ -38,3 +38,9 @@ class Alarm {
     }
     
 } // Class end
+
+extension Alarm: Equatable {
+static func == (lhs: Alarm, rhs: Alarm) -> Bool {
+    return lhs.uuid == rhs.uuid
+}
+}

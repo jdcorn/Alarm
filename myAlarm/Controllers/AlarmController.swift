@@ -13,9 +13,26 @@ class AlarmController {
     
     var alarms: [Alarm] = []
     
-    // MARK: - Functions
+    static var sharedInstance = AlarmController()
     
-    addAlarm
+    // MARK: - CRUD Functions
+    
+    func addAlarm(fireDate: Date, name: String, enabled: Bool) {
+        let alarm = Alarm(fireDate: fireDate, name: name, enabled: enabled)
+        self.alarms.append(alarm)
+    }
+    
+    func updateAlarm(alarm: Alarm, fireDate: Date, name: String, enabled: Bool){
+        alarm.fireDate = fireDate
+        alarm.name = name
+        alarm.enabled = enabled
+    }
+    
+    func deleteAlarm(alarm: Alarm) {
+        guard let index = alarms.firstIndex(of: alarm) else { return }
+        alarms.remove(at: index)
+        
+    }
     
     
 } // Class end

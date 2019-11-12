@@ -33,6 +33,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D3D94F0237B0C8A005DC58C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6D3D94F1237B0C93005DC58C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6D3D94F2237B0C9A005DC58C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F7C2037F2131AD3400C3FC77 = {
 			isa = PBXGroup;
 			children = (
@@ -52,33 +73,12 @@
 		F7C2038A2131AD3400C3FC77 /* myAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				6D3D94F2237B0C9A005DC58C /* Models */,
+				6D3D94F1237B0C93005DC58C /* Views */,
+				6D3D94F0237B0C8A005DC58C /* Controllers */,
 				F7C203AA2131B1F600C3FC77 /* Resources */,
-				F7C203A92131B1E300C3FC77 /* Views */,
-				F7C203A72131B1D500C3FC77 /* Models */,
-				F7C203A82131B1DB00C3FC77 /* Controllers */,
 			);
 			path = myAlarm;
-			sourceTree = "<group>";
-		};
-		F7C203A72131B1D500C3FC77 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		F7C203A82131B1DB00C3FC77 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		F7C203A92131B1E300C3FC77 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		F7C203AA2131B1F600C3FC77 /* Resources */ = {

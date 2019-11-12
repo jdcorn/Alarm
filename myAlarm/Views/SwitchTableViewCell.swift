@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SwitchTableViceCellDelegate: class {
+    func switchCellSwitchValueChanged(cell: SwitchTableViewCell)
+}
+
 class SwitchTableViewCell: UITableViewCell {
     // MARK: - Properties
     var alarm: Alarm? {
@@ -16,6 +20,8 @@ class SwitchTableViewCell: UITableViewCell {
         }
     }
     
+    weak var delegate: SwitchTableViceCellDelegate?
+    
     // MARK: - Outlets
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -23,6 +29,7 @@ class SwitchTableViewCell: UITableViewCell {
     
     // MARK: - Actions
     @IBAction func switchValueChanged(_ sender: Any) {
+        delegate?.switchCellSwitchValueChanged(cell: self)
     }
     
     // MARK: - Functions

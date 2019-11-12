@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="107" id="nEp-gQ-J62" customClass="SwitchTableViewCell" customModule="myAlarm" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="alarmCell" rowHeight="107" id="nEp-gQ-J62" customClass="SwitchTableViewCell" customModule="myAlarm" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nEp-gQ-J62" id="Rnq-XI-yEW">
@@ -53,7 +53,7 @@
                                     <outlet property="alarmSwitch" destination="fml-Aj-hHj" id="bRn-MF-kWc"/>
                                     <outlet property="nameLabel" destination="wjU-Cw-h9Z" id="NJR-W0-9fh"/>
                                     <outlet property="timeLabel" destination="sgh-fD-INs" id="uS4-du-eMZ"/>
-                                    <segue destination="kMk-bX-eU2" kind="show" id="rkl-LZ-Aya"/>
+                                    <segue destination="kMk-bX-eU2" kind="show" identifier="toAlarmDetail" id="rkl-LZ-Aya"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -137,7 +137,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cZ-Dg-Wc3">
                                                     <rect key="frame" x="5" y="5" width="365" height="34"/>
-                                                    <state key="normal" title="Button"/>
+                                                    <state key="normal" title="Enable"/>
                                                     <connections>
                                                         <action selector="enableButtonTapped:" destination="kMk-bX-eU2" eventType="touchUpInside" id="PNS-0c-Dc9"/>
                                                     </connections>

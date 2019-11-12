@@ -10,7 +10,7 @@ import Foundation
 
 // Alarm class that contains the Alarm model object.
 // This model will represent a name, if it's on or off, UUID, a time to go off, string rep of that time.
-class Alarm {
+class Alarm: Codable {
     // MARK: - Properies
     
     // fireDate stores a date representing the time the alarm will go off.

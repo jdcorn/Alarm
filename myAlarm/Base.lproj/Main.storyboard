@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Alarms-->
         <scene sceneID="Vyx-oa-8sX">
             <objects>
                 <tableViewController id="wJI-ya-o8D" customClass="AlarmListTableViewController" customModule="myAlarm" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,17 +30,17 @@
                                                 <action selector="switchValueChanged:" destination="nEp-gQ-J62" eventType="valueChanged" id="YNv-CP-eFQ"/>
                                             </connections>
                                         </switch>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="048-eb-g7C">
-                                            <rect key="frame" x="16" y="18" width="98.5" height="70.5"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="048-eb-g7C">
+                                            <rect key="frame" x="21" y="16" width="98.5" height="75"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Time)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgh-fD-INs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="98.5" height="42"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(Time)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgh-fD-INs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="98.5" height="46.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjU-Cw-h9Z">
-                                                    <rect key="frame" x="0.0" y="50" width="98.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjU-Cw-h9Z">
+                                                    <rect key="frame" x="0.0" y="54.5" width="98.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -48,6 +48,11 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="048-eb-g7C" secondAttribute="bottom" constant="5" id="2b0-Mb-Dqp"/>
+                                        <constraint firstItem="048-eb-g7C" firstAttribute="top" secondItem="Rnq-XI-yEW" secondAttribute="topMargin" constant="5" id="ntG-wz-kE1"/>
+                                        <constraint firstItem="048-eb-g7C" firstAttribute="leading" secondItem="Rnq-XI-yEW" secondAttribute="leadingMargin" constant="5" id="ugU-S6-Gh2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="alarmSwitch" destination="fml-Aj-hHj" id="bRn-MF-kWc"/>
@@ -62,7 +67,7 @@
                             <outlet property="delegate" destination="wJI-ya-o8D" id="4Ku-nZ-PwJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="VuS-fW-WWK">
+                    <navigationItem key="navigationItem" title="Alarms" id="VuS-fW-WWK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xIZ-ks-dOo">
                             <connections>
                                 <segue destination="kMk-bX-eU2" kind="show" id="ZuP-c2-x7k"/>
